@@ -34,8 +34,8 @@ services:
       - 8081:8090 # supervisor GUI
     networks:
       - overlay
-    logging:
-      driver: journald
+    #logging:
+    #  driver: journald
 
   db:
     image: 'mariadb:10.3'
@@ -48,8 +48,8 @@ services:
       - db_data:/var/lib/mysql/data
     networks:
       - overlay
-    logging:
-      driver: journald
+    #logging:
+    #  driver: journald
 
   mailhog:
     image: mailhog/mailhog
@@ -59,8 +59,8 @@ services:
       - 8025:8025
     networks:
       - overlay
-    logging:
-      driver: journald
+    #logging:
+    #  driver: journald
     privileged: true
 
 volumes:
